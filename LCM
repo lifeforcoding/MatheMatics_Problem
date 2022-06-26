@@ -1,0 +1,11 @@
+public static int LCM(int a, int b) {
+        return (a * b) / euclidGCD(a,b);
+    }
+    // Calculating HCF or GCD of 2 number
+    public static int euclidGCD(int a, int b) {
+        if (a == 0)
+            return b;
+        if (a > b)
+            return euclidGCD(a % b, b);
+        else return euclidGCD(b % a, a);
+    }
