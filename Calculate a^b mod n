@@ -1,0 +1,9 @@
+public static int fastPower(int a, int b,int mod) {
+        if (b == 0)
+            return 1;
+        int halfAns = fastPower(a,b / 2, mod);
+        int fullAns = (halfAns * halfAns) % mod;
+        if (b % 2 != 0)
+            fullAns = (fullAns * a % mod);
+        return fullAns;
+    }
